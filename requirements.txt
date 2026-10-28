@@ -1,0 +1,13 @@
+# DigitForge - CPU-only PyTorch (works on Streamlit Community Cloud and any CPU machine).
+# For a local NVIDIA GPU, install the CUDA build first:
+#   python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+--extra-index-url https://download.pytorch.org/whl/cpu
+streamlit>=1.50
+torch>=2.2
+torchvision>=0.17
+numpy>=1.24
+pillow>=10.0
+opencv-python-headless>=4.8
+scikit-image>=0.21
+matplotlib>=3.7
+pandas>=2.0
