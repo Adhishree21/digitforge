@@ -1,0 +1,91 @@
+{
+  "signature": [
+    [
+      "rbm",
+      "91b6107f7e728bd6f0edd5f1e5328a162e27588b"
+    ],
+    [
+      "vae",
+      "e44c40a6253923202a4fb3bbeb10638cc8121ad5"
+    ]
+  ],
+  "n_samples": 10000,
+  "rbm_steps": 1,
+  "device": "cuda",
+  "created": 1793001168.6312902,
+  "summary": {
+    "rbm": {
+      "MSE": {
+        "mean": 0.010603175911055354,
+        "median": 0.010508175083598928,
+        "std": 0.0032856830442230425
+      },
+      "MAE": {
+        "mean": 0.03030927088995421,
+        "median": 0.03067500945621961,
+        "std": 0.007734415512490328
+      },
+      "PSNR": {
+        "mean": 19.977546708713128,
+        "median": 19.784726998547786,
+        "std": 1.4805211666661524
+      },
+      "SSIM": {
+        "mean": 0.892672537624575,
+        "median": 0.8952587841860349,
+        "std": 0.02619224811687034
+      }
+    },
+    "vae": {
+      "MSE": {
+        "mean": 0.009150909822802788,
+        "median": 0.008004300013708325,
+        "std": 0.005902333875459626
+      },
+      "MAE": {
+        "mean": 0.032343982260227624,
+        "median": 0.03137293814712086,
+        "std": 0.013130962326511925
+      },
+      "PSNR": {
+        "mean": 21.23637974591498,
+        "median": 20.966766541152364,
+        "std": 2.8496366082066777
+      },
+      "SSIM": {
+        "mean": 0.8968752590349164,
+        "median": 0.9063755542548311,
+        "std": 0.05491150061380255
+      }
+    }
+  },
+  "latency": {
+    "rbm": {
+      "mean_ms": 0.2680420037358999,
+      "std_ms": 0.10129555293908588,
+      "median_ms": 0.23654999677091837,
+      "p95_ms": 0.5288849526550621,
+      "runs": 100
+    },
+    "vae": {
+      "mean_ms": 0.5249440076295286,
+      "std_ms": 0.05867205655770696,
+      "median_ms": 0.5089999758638442,
+      "p95_ms": 0.6213499582372606,
+      "runs": 100
+    }
+  },
+  "latency_method": "Batch size 1, the same input digit for every model, on the device shown. 10 warm-up runs are discarded, then 100 timed runs, each bracketed by a device synchronisation. One-time checkpoint loading is excluded. RBM uses 1 Gibbs step(s); VAE is deterministic (latent mean).",
+  "complexity": {
+    "rbm": {
+      "params_inference": 402704,
+      "params_total": 402704,
+      "checkpoint_mb": 3.075779914855957
+    },
+    "vae": {
+      "params_inference": 1691369,
+      "params_total": 1691369,
+      "checkpoint_mb": 6.458264350891113
+    }
+  }
+}
